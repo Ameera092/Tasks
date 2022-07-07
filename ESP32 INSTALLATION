@@ -1,0 +1,55 @@
+** INSTALLING THE ESP32 BOARD IN ARDUINO IDE **
+
+We'll demonstrate how to install the ESP32 board in the Arduino IDE in this tutorial.
+
+ install the ESP32 board in your Arduino IDE, follow these next instructions:
+
+1.In your Arduino IDE, go to File> Preferences
+
+2.Enter the following into the “Additional Board Manager URLs” field:
+
+"https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+Then, click the “OK” button".
+
+
+3.Open the Boards Manager. Go to Tools > Board > Boards Manager…
+
+4.Search for ESP32 and press install button for the “ESP32 by Espressif Systems.
+
+5.That’s it. It should be installed after a few seconds.
+
+
+** TESTING THE INSTALLATION **
+
+Plug the ESP32 board to your computer. With your Arduino IDE open, follow these steps:
+
+1. Select your Board in Tools > Board menu (in my case it’s the DOIT ESP32 DEVKIT V1)
+
+2.select the Port (if you don’t see the COM Port in your Arduino IDE, you need to install the CP210x USB to UART Bridge
+ VCP Drivers).
+
+3.Open the following example under File > Examples > WiFi (ESP32) > WiFiScan.
+
+4.A new sketch opens in your Arduino IDE.
+
+5. A new sketch opens in your Arduino IDE.
+
+6.If everything went as expected, you should see a “Done uploading.” message.
+
+7.Open the Arduino IDE Serial Monitor at a baud rate of 115200.
+
+8. Press the ESP32 on-board Enable button and you should see the networks available near your ESP32.
+
+** TROUBLESHOOTING **
+If you try to upload a new sketch to your ESP32 and you get this error message “A fatal error occurred: Failed to connect to ESP32: Timed out… Connecting…“. It means that your ESP32 is not in flashing/uploading mode.
+
+Having the right board name and COM por selected, follow these steps:
+
+- Hold-down the “BOOT” button in your ESP32 board
+-Press the “Upload” button in the Arduino IDE to upload your sketch
+- Press the “Upload” button in the Arduino IDE to upload your sketch.
+-After that, you should see the “Done uploading” message.
+
+That’s it. Your ESP32 should have the new sketch running. Press the “ENABLE” button to restart the ESP32 and run the new uploaded sketch. 
+
+
